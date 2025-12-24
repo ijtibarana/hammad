@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Hammad — Designer and Developer</title>
+  <meta name="description"
+    content="Hammad is a freelance award-winning designer and developer specializing in UI/UX, branding and web development.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sacramento&family=Archivo+Black&family=Fahkwang:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/main.css?v=31.0" />
+  <!-- Tailwind CSS v4 -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- Lenis Smooth Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor">
+    <div class="crosshair-h"></div>
+    <div class="crosshair-v"></div>
+  </div>
+
+  <!-- Custom Preloader -->
+  <div id="preloader">
+    <div id="loader-curtain"></div>
+    <div class="loader-header">HAMMAD — VISUAL<br>DESIGNER & CODER</div>
+
+    <div class="loader-gallery">
+      <div class="pct-side" id="loader-pct-left">0%</div>
+      <div class="loader-line"></div>
+
+      <div class="loader-images-row">
+        <img src="./assets/img/loader/img1.png" alt="Loader 1">
+        <img src="./assets/img/loader/img2.png" alt="Loader 2">
+        <img src="./assets/img/loader/img3.png" alt="Loader 3">
+        <img src="./assets/img/loader/img4.png" alt="Loader 4">
+        <img src="./assets/img/loader/img1.png" alt="Loader 5">
+      </div>
+
+      <div class="loader-line"></div>
+      <div class="pct-side" id="loader-pct-right">0%</div>
+    </div>
+
+    <div class="loader-spinner-bottom"></div>
+  </div>
+
+
+
+  <!-- NAVIGATION (Image 3 Desktop / Image 2 Mobile) -->
+  <nav class="nav-new">
+    <!-- Left: Logo (Image 3 Style) -->
+    <div class="nav__logo-container">
+      <img src="./assets/img/hammad portfolio logo.png" alt="HAMMAD" class="nav__logo-img">
+    </div>
+
+    <!-- Center: Links (Desktop Layout From Image 3) -->
+    <div class="nav__desktop-links">
+      <div class="nav__col">
+        <a href="#home"><span>①</span> HOME</a>
+        <a href="#about"><span>②</span> ABOUT</a>
+        <a href="#works"><span>③</span> WORKS</a>
+      </div>
+      <div class="nav__col">
+        <a href="https://instagram.com" target="_blank"><span>①</span> INSTAGRAM</a>
+        <a href="https://linkedin.com" target="_blank"><span>②</span> LINKED IN</a>
+        <a href="https://behance.net" target="_blank"><span>③</span> BEHANCE</a>
+      </div>
+    </div>
+
+    <!-- Right: Contact (Desktop Layout From Image 3) -->
+    <div class="nav__right-contact">
+      <div class="contact-label">AVAILABLE FOR PROJECTS</div>
+      <a href="mailto:hello@hammad.me" class="contact-email">HELLO@HAMMAD.ME</a>
+      <div class="contact-sub">SEND PROJECT INQUIRY</div>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="nav__mobile-toggle">
+      <div class="toggle-line line-1"></div>
+      <div class="toggle-line line-2"></div>
+    </div>
+
+    <!-- Mobile Menu Overlay (Image 2 Precise Layout) -->
+    <div class="mobile-menu-overlay">
+      <div class="mobile-menu__header">
+        <img src="./assets/img/hammad portfolio logo.png" alt="HAMMAD" class="menu-logo">
+        <div class="menu-close-btn">
+          <svg viewBox="0 0 24 24" width="30" height="30">
+            <path d="M18 6L6 18M6 6l12 12" stroke="#1a0515" stroke-width="2" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="mobile-menu__inner">
+        <div class="mobile-menu__links">
+          <a href="#about" class="menu-item"><span class="sup">①</span> ABOUT</a>
+          <a href="#works" class="menu-item"><span class="sup">②</span> WORKS</a>
+          <a href="#playbook" class="menu-item"><span class="sup">③</span> SERVICES</a>
+        </div>
+
+        <div class="mobile-menu__contact-section">
+          <div class="contact-divider">
+            <span>✦✦</span>
+            <p>FOR WORK — CONTACT BELOW</p>
+            <span>✦✦</span>
+          </div>
+          <a href="mailto:hi@hammad.me" class="email-pill">
+            hi@hammad.me
+          </a>
+        </div>
+
+        <div class="mobile-menu__socials">
+          <a href="#" class="social-link">w.</a>
+          <a href="#" class="social-link">Bē</a>
+          <a href="#" class="social-link">IG</a>
+          <a href="#" class="social-link">X</a>
+          <a href="#" class="social-link">in</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION REDESIGN (v2: Typography Centric) -->
+    <div id="home" class="hero-v2">
+      <!-- 3D Parallax Background -->
+      <div class="hero_3d_bg">
+        <img src="./assets/img/hero_forest.png" class="asset-3d asset-forest" data-parallax-3d="0.1">
+        <img src="./assets/img/007.png" class="asset-3d asset-bg-1" data-parallax-3d="0.15">
+        <img src="./assets/img/006.png" class="asset-3d asset-fg-2" data-parallax-3d="-0.2">
+      </div>
+
+      <!-- Background Overlay Gradient & Video -->
+      <div class="hero-v2__bg">
+        <video src="./assets/video/hero_bg.mp4" autoplay loop muted playsinline class="hero-video-bg"></video>
+      </div>
+      <div class="grain-overlay"></div>
+
+      <div class="hero-v2__content">
+        <!-- Center 3D Asset -->
+        <div class="hero-center-graphic reveal-item">
+          <img src="./assets/img/hero_center_asset.png" alt="3D Creative Asset">
+        </div>
+
+        <!-- Big Titles with 3D Stacked Effect -->
+        <div class="hero-v2__title reveal-item">
+          <figure class="stacked-3d">
+            <span class="layer">I CREATE;</span><span class="layer">I CREATE;</span><span class="layer">I
+              CREATE;</span><span class="layer">I CREATE;</span><span class="layer">I CREATE;</span><span
+              class="layer">I CREATE;</span><span class="layer">I CREATE;</span><span class="layer">I
+              CREATE;</span><span class="layer">I CREATE;</span><span class="layer">I CREATE;</span>
+          </figure>
+        </div>
+        <div class="hero-v2__title reveal-item" style="transition-delay: 0.1s;">
+          <figure class="stacked-3d">
+            <span class="layer">THEREFORE</span><span class="layer">THEREFORE</span><span
+              class="layer">THEREFORE</span><span class="layer">THEREFORE</span><span
+              class="layer">THEREFORE</span><span class="layer">THEREFORE</span><span
+              class="layer">THEREFORE</span><span class="layer">THEREFORE</span><span
+              class="layer">THEREFORE</span><span class="layer">THEREFORE</span>
+          </figure>
+        </div>
+        <div class="hero-v2__title reveal-item" style="transition-delay: 0.2s;">
+          <figure class="stacked-3d">
+            <span class="layer">I AM</span><span class="layer">I AM</span><span class="layer">I AM</span><span
+              class="layer">I AM</span><span class="layer">I AM</span><span class="layer">I AM</span><span
+              class="layer">I AM</span><span class="layer">I AM</span><span class="layer">I AM</span><span
+              class="layer">I AM</span>
+          </figure>
+        </div>
+
+        <!-- Subtext Area -->
+        <div class="hero-v2__subtext reveal-item">
+          <span class="praxis">DESIGN PRAXIS EST. 2024</span>
+        </div>
+
+        <!-- Signature Footer -->
+        <div class="hero-v2__signature reveal-item" data-parallax-3d="0.15">
+          Designed in Pakistan
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Biography Section (Hammad Edition) -->
+    <section id="about" class="bio-section py-20 lg:py-40">
+      <div class="grain-overlay pointer-events-none"></div>
+      <div class="bio-container mx-auto px-6 max-w-7xl">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+          <!-- Left: Text Content -->
+          <div class="bio-left flex-1 text-center lg:text-left order-2 lg:order-1" data-parallax-3d="0.05">
+            <div class="bio-text text-white/80 text-lg md:text-2xl leading-relaxed space-y-8 font-medium">
+              <p>I’m a passionate <strong>3D Artist and Graphic Designer</strong> with a strong focus on creating
+                visually compelling and detail-oriented digital experiences. I specialize in 3D modeling, texturing,
+                rendering, and visual design, bringing ideas to life through realistic and stylized visuals.</p>
+
+              <p>With a creative mindset and a problem-solving approach, I enjoy working on a wide range of
+                projects—from product visualizations and game assets to branding and promotional designs. I believe in
+                continuous learning, staying updated with industry trends, and delivering high-quality work that meets
+                both artistic and technical standards.</p>
+
+              <p>My goal is to collaborate with brands, studios, and individuals to create impactful visuals that tell a
+                story and leave a lasting impression.</p>
+            </div>
+            <div class="bio-arrow mt-8 text-white/40 text-4xl mx-auto lg:mx-0">↓</div>
+          </div>
+
+          <!-- Middle: Vertical Divider -->
+          <div class="hidden lg:flex flex-col items-center gap-6 opacity-20">
+            <div class="w-px h-32 bg-white"></div>
+            <div class="text-white text-2xl rotate-45">❋</div>
+            <div class="w-px h-32 bg-white"></div>
+          </div>
+
+          <!-- Right: Portrait & Info -->
+          <div
+            class="bio-right flex-1 flex flex-col items-center lg:items-end text-center lg:text-right order-1 lg:order-2"
+            data-parallax-3d="0.15">
+            <div class="bio-image-wrapper mb-8 max-w-sm md:max-w-md shadow-2xl overflow-hidden rounded-xl">
+              <img src="./assets/img/hammad_new_portrait.jpg" alt="Hammad Portrait"
+                class="w-full grayscale hover:grayscale-0 transition-all duration-700 hover:scale-[1.05]">
+            </div>
+            <div class="bio-info">
+              <h1 class="thunder-title text-7xl lg:text-8xl text-white mb-2 leading-none">HAMMAD</h1>
+              <p class="font-primary text-white/40 text-sm tracking-[0.4em] uppercase">FOUNDER HAMMAD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview-section">
+      <div class="grain-overlay"></div>
+      <div class="about-content">
+        <div class="about-text-side left">
+          <p>THE FUSION OF DESIGN PRINCIPLES WITH<br>UNPARALLELED VISUAL STORYTELLING.</p>
+        </div>
+        <div class="about-center-logo">
+          <div class="logo-oval">
+            <span class="deco-icon top">❋</span>
+            <h2 class="script-logo">Ha</h2>
+            <span class="deco-icon bottom">❋</span>
+          </div>
+        </div>
+        <div class="about-text-side right">
+          <p>I CRAFT WEBSITES WHICH WILL ELEVATE YOUR<br>BRAND TO A GLOBAL STAGE.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+      <!-- Side Decorations -->
+      <div class="side-deco left">
+        <div class="crosshair-anim"></div>
+      </div>
+
+      <div class="mission-content">
+        <div class="mission-text top">
+          <p>I am a passionate visual<br>designer and developer <em>driven<br>by a single mission</em></p>
+        </div>
+
+        <div class="mission-image" data-parallax-3d="0.1">
+          <img src="./assets/img/006.png" alt="Mission Abstract">
+        </div>
+
+        <div class="mission-text bottom">
+          <p>to create experiences that are as<br><em>beautiful as they are functional.</em></p>
+        </div>
+      </div>
+
+      <div class="side-deco right">
+        <div class="crosshair-anim"></div>
+      </div>
+    </section>
+
+    <!-- Video Showcase Section (Arched Edition) -->
+    <section class="arched-showcase-v2">
+      <div class="video-viewport-v2" data-depth="0.15">
+        <video autoplay muted loop playsinline>
+          <source src="./assets/video/showcase.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <!-- Crafting Legacies Section (White Design) -->
+    <section id="works" class="crafting-section">
+      <div class="grain-overlay"></div>
+
+      <!-- Desktop Layout Container -->
+      <div class="crafting-container">
+        <!-- Row 1: Title & Flowers (Desktop) / Pill & Title (Mobile) -->
+        <div class="crafting-row row-top">
+          <div class="crafting-title-area">
+            <div class="title-line">
+              <h1 class="thunder-title">CRAFTING</h1>
+              <span class="script-overlay script-1">for Visionary</span>
+            </div>
+            <div class="title-line">
+              <h1 class="thunder-title">LEGACIES</h1>
+              <span class="script-overlay script-2">brands</span>
+            </div>
+          </div>
+
+          <div class="crafting-deco-area">
+            <div class="orange-flowers">
+              <span>✱</span><span>✱</span><span>✱</span>
+            </div>
+            <!-- This pill moves on desktop/mobile -->
+            <div class="what-i-do-pill mobile-top">[ WHAT I DO ]</div>
+          </div>
+        </div>
+
+        <!-- Row 2: Subtext Area -->
+        <div class="crafting-row row-mid">
+          <div class="crafting-subtext-area">
+            <p>I HAVE WON MULTIPLE AWARDS FROM DIFFERENT ORGANIZATIONS.</p>
+            <p>MY FORTE LIES IN TECH, BEAUTY, FASHION, FOOD, CRYPTO AND SAAS</p>
+          </div>
+
+          <div class="what-i-do-pill desktop-only">[ WHAT I DO ]</div>
+        </div>
+
+        <!-- Row 3: Philosophy Quote & Action -->
+        <div class="crafting-row row-bottom">
+          <div class="phil-action-group">
+            <div class="phil-pill">MY PHILOSOPHY</div>
+            <div class="down-arrow-circle">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 5v14m0 0l-5-5m5 5l5-5" stroke="currentColor" fill="none" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="philosophy-quote">
+            <p>
+              I combine timeless design principles with cutting-edge technology to craft
+              award-winning websites that resonate with a global audience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Grid Section -->
+    <section class="services-grid-section">
+      <div class="grain-overlay"></div>
+
+      <div class="services-grid-header">
+        <div class="pill-title">[ WHAT I CAN DO FOR YOU ]</div>
+      </div>
+
+      <div class="grid-container">
+        <!-- Row 1: BRANDING -->
+        <div class="grid-row row-1 centered-row">
+          <div class="floating-img img-1" data-depth="0.2">
+            <img src="./assets/img/service_branding.jpg" alt="Branding Concept">
+          </div>
+          <h2 class="thunder-text reveal-stagger">BRANDING</h2>
+        </div>
+
+        <!-- Row 2: WEB-DESIGN -->
+        <div class="grid-row row-2 centered-row">
+          <h2 class="thunder-text reveal-stagger">WEB-DESIGN</h2>
+          <div class="floating-img img-2" data-depth="0.4">
+            <img src="./assets/img/service_webdesign.jpg" alt="Web Design Sample">
+          </div>
+        </div>
+
+        <!-- Row 3: DEVELOPMENT -->
+        <div class="grid-row row-3 centered-row">
+          <h2 class="thunder-text reveal-stagger">DEVELOPMENT</h2>
+        </div>
+
+        <!-- Row 4: ASSETS -->
+        <div class="grid-row row-4 centered-row">
+          <h2 class="thunder-text reveal-stagger">ASSETS</h2>
+          <div class="floating-img img-4" data-depth="0.35">
+            <img src="./assets/img/service_assets.jpg" alt="3D Assets Sample">
+          </div>
+        </div>
+
+        <!-- Row 5: APP-DESIGN -->
+        <div class="grid-row row-5 centered-row">
+          <h2 class="thunder-text reveal-stagger">APP-DESIGN</h2>
+          <div class="floating-img img-5" data-depth="0.2">
+            <img src="./assets/img/new_bg_image.jpg" alt="Fly Buy Mobile UI">
+          </div>
+        </div>
+      </div>
+
+      <!-- Icon Slider Marquee -->
+      <div class="services-marquee-slider">
+        <div class="marquee-content">
+          <div class="icon-item"><img src="./assets/img/icon_blender.png" alt="Blender"></div>
+          <div class="icon-item"><img src="./assets/img/icon_adobe_cc.png" alt="Adobe CC"></div>
+          <div class="icon-item"><img src="./assets/img/icon_illustrator.png" alt="Illustrator"></div>
+          <div class="icon-item"><img src="./assets/img/icon_coreldraw.png" alt="CorelDraw"></div>
+          <div class="icon-item"><img src="./assets/img/icon_after_effects.png" alt="After Effects"></div>
+          <!-- Loop for infinite effect -->
+          <div class="icon-item"><img src="./assets/img/icon_blender.png" alt="Blender"></div>
+          <div class="icon-item"><img src="./assets/img/icon_adobe_cc.png" alt="Adobe CC"></div>
+          <div class="icon-item"><img src="./assets/img/icon_illustrator.png" alt="Illustrator"></div>
+          <div class="icon-item"><img src="./assets/img/icon_coreldraw.png" alt="CorelDraw"></div>
+          <div class="icon-item"><img src="./assets/img/icon_after_effects.png" alt="After Effects"></div>
+        </div>
+      </div>
+
+      <div class="grid-footer">
+        <p>I HAVE A NETWORK OF OTHER TALENTED FOLKS, DEPENDING ON THE PROJECT I WORK WITH OTHERS TO DELIVER THE BEST
+          WORK</p>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section (Dark Green Edition) -->
+    <section id="projects" class="featured-projects-section">
+      <div class="grain-overlay"></div>
+
+      <div class="projects-header">
+        <h1 class="header-script">Featured</h1>
+        <h1 class="header-script right">Projects</h1>
+        <div class="decoration floras-center">✱✱✱</div>
+      </div>
+
+      <div class="projects-list">
+        <!-- Project 1 -->
+        <div class="project-item" data-3d-scroll>
+          <div class="project-info">
+            <span class="script-overlay">TRADE SHOW</span>
+            <h2 class="thunder-title-project font-heavy">TRADE SHOW</h2>
+            <div class="project-circle-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" fill="none" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-media">
+            <div class="media-container">
+              <img src="./assets/img/new_tradeshow_image.jpg" alt="Trade Show Vehicle Render">
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-item" data-3d-scroll>
+          <div class="project-info">
+            <span class="script-overlay">FRANK'S</span>
+            <h2 class="thunder-title-project font-heavy">FRANK'S</h2>
+            <div class="project-circle-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" fill="none" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-media">
+            <div class="media-container">
+              <img src="./assets/img/proj_2.jpg" alt="Frank's 3D Model">
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-item" data-3d-scroll>
+          <div class="project-info">
+            <span class="script-overlay">AQUAFINA</span>
+            <h2 class="thunder-title-project font-heavy">RETAIL DISPLAY</h2>
+            <div class="project-circle-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" fill="none" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-media">
+            <div class="media-container">
+              <img src="./assets/img/proj_aquafina.png" alt="Retail Display Aquafina"
+                class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-item" data-3d-scroll>
+          <div class="project-info">
+            <span class="script-overlay">RETAIL</span>
+            <h2 class="thunder-title-project font-heavy">RETAIL DISPLAY</h2>
+            <div class="project-circle-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" fill="none" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-media">
+            <div class="media-container">
+              <img src="./assets/img/proj_render.png" alt="Retail Display Render">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Playbook Section (Beige Marquee Edition) -->
+    <section id="playbook" class="playbook-section py-20 pb-40">
+      <div class="grain-overlay"></div>
+
+      <div class="playbook-header">
+        <div class="globe-wireframe globe-left">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="0.5" />
+            <ellipse cx="50" cy="50" rx="48" ry="20" fill="none" stroke="currentColor" stroke-width="0.5" />
+            <ellipse cx="50" cy="50" rx="20" ry="48" fill="none" stroke="currentColor" stroke-width="0.5" />
+            <line x1="2" y1="50" x2="98" y2="50" stroke="currentColor" stroke-width="0.5" />
+            <line x1="50" y1="2" x2="50" y2="98" stroke="currentColor" stroke-width="0.5" />
+          </svg>
+        </div>
+
+        <div class="header-content">
+          <h1 class="playbook-title">3D Models</h1>
+          <p class="playbook-subtitle">SOME OF MY RANDOM EXPLORATIONS<br>WITH 3D RENDERS AND MOTION</p>
+          <div class="header-decoration">
+            <svg viewBox="0 0 40 20">
+              <path d="M0 10 Q 10 0, 20 10 T 40 10" fill="none" stroke="currentColor" stroke-width="1" />
+              <circle cx="20" cy="10" r="2" fill="currentColor" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="globe-wireframe globe-right">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="0.5" />
+            <ellipse cx="50" cy="50" rx="48" ry="20" fill="none" stroke="currentColor" stroke-width="0.5" />
+            <ellipse cx="50" cy="50" rx="20" ry="48" fill="none" stroke="currentColor" stroke-width="0.5" />
+            <line x1="2" y1="50" x2="98" y2="50" stroke="currentColor" stroke-width="0.5" />
+            <line x1="50" y1="2" x2="50" y2="98" stroke="currentColor" stroke-width="0.5" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="playbook-slider-container">
+        <div class="playbook-slider">
+          <!-- Replicated slides for seamless loop -->
+          <div class="playbook-slide"><img src="./assets/img/playbook/002.jpg" alt="Work 1"></div>
+          <div class="playbook-slide"><img src="./assets/img/playbook/untitled.png" alt="Work 2"></div>
+          <div class="playbook-slide"><img src="./assets/img/playbook/render 0000.png" alt="Work 3"></div>
+          <div class="playbook-slide"><img src="./assets/img/playbook/perfume .png" alt="Work 4"></div>
+          <div class="playbook-slide"><img src="./assets/img/playbook/cube render.png" alt="Work 5"></div>
+          <div class="playbook-slide"><img src="./assets/img/playbook/car.png" alt="Work 6"></div>
+          <div class="playbook-slide"><img src="./assets/img/playbook/bulb2.png" alt="Work 8"></div>
+          <div class="playbook-slide"><img src="./assets/img/playbook/82.jpg" alt="Work 10"></div>
+          <!-- Duplicate for loop -->
+          <div class="playbook-slide"><img src="./assets/img/playbook/002.jpg" alt="Work 1"></div>
+          <div class="playbook-slide"><img src="./assets/img/playbook/untitled.png" alt="Work 2"></div>
+          <div class="playbook-slide"><img src="./assets/img/playbook/render 0000.png" alt="Work 3"></div>
+          <div class="playbook-slide"><img src="./assets/img/playbook/perfume .png" alt="Work 4"></div>
+          <div class="playbook-slide"><img src="./assets/img/playbook/cube render.png" alt="Work 5"></div>
+        </div>
+      </div>
+
+      <div class="playbook-footer">
+        <div class="playbook-ruler">
+          <!-- Ruler ticks will be styled in CSS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Benchmark Video Section -->
+    <section id="benchmark" class="benchmark-section">
+      <div class="benchmark-content">
+        <h2 class="thunder-title benchmark-main-title">PRODUCT<br>ANIMATION</h2>
+
+        <div class="benchmark-video-container">
+          <video src="./assets/video/benchmark.mp4" autoplay loop muted playsinline class="benchmark-video"></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Premium Site Footer -->
+    <!-- 3D Reviews Section -->
+    <section id="reviews" class="reviews-section">
+      <div class="reviews-header text-center mb-16">
+        <div class="pill-title mx-auto w-fit mb-6">[ TESTIMONIALS ]</div>
+        <h2 class="thunder-title text-7xl lg:text-9xl text-white">REVIEWS FROM CLIENTS</h2>
+      </div>
+
+      <div class="reviews-container">
+        <div class="reviews-track">
+          <!-- Card 1 -->
+          <div class="review-card">
+            <div class="card-inner">
+              <img src="./assets/img/reviews/review_1.png" alt="Client Review 1">
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="review-card">
+            <div class="card-inner">
+              <img src="./assets/img/reviews/review_2.png" alt="Client Review 2">
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="review-card">
+            <div class="card-inner">
+              <img src="./assets/img/reviews/review_3.png" alt="Client Review 3">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drag Instruction -->
+      <div class="drag-info text-center mt-12 text-white/40 tracking-[0.3em] text-xs">
+        DRAG TO EXPLORE • 3D INTERACTIVE CAROUSEL
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-grain"></div>
+
+      <div class="footer-marquee-container">
+        <div class="footer-marquee-track">
+          <div class="footer-marquee-content">
+            <span class="thunder-footer">SEND AN EMAIL</span>
+            <span class="script-overlay">hear from you</span>
+            <div class="lavender-patch">
+              <div class="patch-inner">
+                <svg viewBox="0 0 100 100">
+                  <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                    fill="transparent" />
+                  <text font-family="Thunder-BlackHC" font-size="12">
+                    <textPath xlink:href="#circlePath">REACH OUT • REACH OUT • </textPath>
+                  </text>
+                </svg>
+                <div class="patch-icon">✉</div>
+              </div>
+            </div>
+            <span class="thunder-footer">SEND AN EMAIL</span>
+            <span class="script-overlay">hear from you</span>
+            <div class="lavender-patch">
+              <div class="patch-inner">
+                <svg viewBox="0 0 100 100">
+                  <path id="circlePath2" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                    fill="transparent" />
+                  <text font-family="Thunder" font-size="12" fill="currentColor">
+                    <textPath xlink:href="#circlePath2">REACH OUT • REACH OUT • </textPath>
+                  </text>
+                </svg>
+                <div class="patch-icon">✉</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-cols">
+          <div class="col">
+            <a href="#" class="footer-link">① INSTAGRAM</a>
+            <a href="#" class="footer-link">② LINKED IN</a>
+            <a href="#" class="footer-link">③ BEHANCE</a>
+          </div>
+          <div class="col">
+            <a href="#" class="footer-link">④ TWITTER</a>
+            <a href="#" class="footer-link">⑤ AWWWARDS</a>
+            <a href="#" class="footer-link">⑥ DRIBBBLE</a>
+          </div>
+        </div>
+
+        <div class="footer-actions">
+          <div class="action-pill">SEND A PROJECT INQUIRY</div>
+          <div class="scroll-top-btn" id="scrollTopBtn">
+            <span>SCROLL BACK TO TOP</span>
+            <div class="arrow-up">↑</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="bottom-left">
+          <p>© 2025 HAMMAD, ALL<br>RIGHTS RESERVED + OLD FOLIO</p>
+        </div>
+        <div class="bottom-center">
+          <div class="hammad-branding">
+            <svg viewBox="0 0 100 20" class="branding-deco">
+              <path d="M0 10 Q 50 20 100 10" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5" />
+            </svg>
+            <h1 class="thunder-brand">HAMMAD</h1>
+            <div class="star-deco">✦</div>
+          </div>
+        </div>
+        <div class="bottom-right">
+          <p>PURELY HAND-CODED, WITH<br>LOVE & PASSION • PLAY TETRIS</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+
+  <!-- SCRIPTS -->
+  <script src="./assets/js/three.min.js"></script>
+  <script src="./assets/js/gsap.min.js"></script>
+  <script src="./assets/js/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="./assets/js/Draggable.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+
+  <!-- Emergency Loader Fix -->
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('preloader');
+        if (loader && getComputedStyle(loader).visibility !== 'hidden') {
+          loader.style.transition = 'opacity 0.5s ease';
+          loader.style.opacity = '0';
+          loader.style.pointerEvents = 'none';
+          document.body.classList.add('loaded');
+          setTimeout(() => { loader.style.display = 'none'; }, 500);
+        }
+      }, 3500); // 3.5s max wait time
+    });
+  </script>
+</body>
+
+</html>
+```
