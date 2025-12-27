@@ -3075,11 +3075,12 @@ body.loaded #preloader {
 
 .review-card {
     position: absolute;
-    width: 650px;
-    /* High impact size */
-    height: 400px;
+    width: 800px;
+    /* Increased for high impact */
+    height: 500px;
     transform-style: preserve-3d;
     will-change: transform;
+    transition: width 0.3s ease, height 0.3s ease;
 }
 
 .card-inner {
@@ -3127,12 +3128,27 @@ body.loaded #preloader {
 
 @media (max-width: 1024px) {
     .review-card {
-        flex: 0 0 320px;
-        height: 240px;
+        width: 650px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews-container {
+        height: 60vh;
     }
 
-    .reviews-container {
-        height: 40vh;
+    .review-card {
+        width: 90vw;
+        height: 55vw;
+        max-width: 500px;
+        max-height: 320px;
+    }
+
+    .review-overlay {
+        width: 85%;
+        transform: translate(-50%, -50%) translateZ(60px);
+        /* Tighter depth for mobile */
     }
 }
 

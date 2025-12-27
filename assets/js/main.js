@@ -669,8 +669,18 @@ function initReviewsSlider() {
     if (!container || !track || cards.length === 0) return;
 
     let rotation = 0;
-    const radius = 800; // Depth of the conveyor belt
+    // Responsive Radius calculation
+    const getRadius = () => {
+        return window.innerWidth < 768 ? window.innerWidth * 0.8 : 900;
+    };
+
+    let radius = getRadius();
     const angleStep = (Math.PI * 2) / cards.length;
+
+    window.addEventListener('resize', () => {
+        radius = getRadius();
+        updateLayout();
+    });
 
     // 1. Initial Position Setup
     function updateLayout() {
@@ -679,12 +689,12 @@ function initReviewsSlider() {
 
             // Calculate 3D positions
             const x = Math.sin(angle) * radius;
-            const z = Math.cos(angle) * radius - radius; // Shift back so center is visible
-            const scale = 1 + (Math.cos(angle) * 0.5); // Bigger when close
-            const opacity = Math.max(0.2, (Math.cos(angle) + 1) / 2);
+            const z = Math.cos(angle) * radius - radius;
+            const scale = 1 + (Math.cos(angle) * 0.4);
+            const opacity = Math.max(0.1, (Math.cos(angle) + 1.2) / 2.2);
 
             // Rotation for face-on effect
-            const rotY = (Math.sin(angle) * -20);
+            const rotY = (Math.sin(angle) * -25);
 
             gsap.set(card, {
                 x: x,
@@ -692,14 +702,14 @@ function initReviewsSlider() {
                 scale: scale,
                 opacity: opacity,
                 rotateY: rotY,
-                zIndex: Math.round(z + radius), // Standard depth ordering
+                zIndex: Math.round(z + radius),
                 overwrite: "auto"
             });
         });
     }
 
-    // 2. Continuous Auto-Rotation (Conveyor Effect)
-    const conveyorSpeed = 0.002;
+    // 2. Continuous Auto-Rotation (Increased Speed)
+    const conveyorSpeed = 0.004; // Doubled speed
     const autoRotate = () => {
         rotation -= conveyorSpeed;
         updateLayout();
@@ -710,15 +720,15 @@ function initReviewsSlider() {
     autoRotate();
 
     // 3. Draggable Interaction
-    Draggable.create(document.createElement('div'), { // Proxy element for cleaner tracking
+    Draggable.create(document.createElement('div'), {
         trigger: container,
         type: "x",
         onDrag: function () {
-            rotation += this.deltaX * 0.005;
+            rotation += this.deltaX * 0.003; // Adjusted for new radius
             updateLayout();
         },
         onThrowUpdate: function () {
-            rotation += this.deltaX * 0.005;
+            rotation += this.deltaX * 0.003;
             updateLayout();
         }
     });
