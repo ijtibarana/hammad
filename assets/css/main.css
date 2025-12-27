@@ -2973,7 +2973,8 @@ body.loaded #preloader {
 }
 
 .benchmark-center {
-    width: 50%;
+    width: 80%;
+    /* Increased for better visibility */
 }
 
 .benchmark-text {
@@ -3006,9 +3007,9 @@ body.loaded #preloader {
     width: 100%;
     height: auto;
     display: block;
-    mix-blend-mode: multiply;
-    /* Helps with "without background" if white bg */
-    transform: perspective(1000px) rotateY(-5deg);
+    /* Removed blend mode to ensure visibility on dark/maroon backgrounds */
+    border-radius: 20px;
+    transform: perspective(1000px) rotateY(-2deg);
     transition: transform 0.5s ease;
 }
 
@@ -3077,7 +3078,7 @@ body.loaded #preloader {
     position: absolute;
     width: 1000px;
     /* Cinematic impact */
-    height: 600px;
+    height: 500px;
     transform-style: preserve-3d;
     will-change: transform;
     transition: width 0.3s ease, height 0.3s ease;
