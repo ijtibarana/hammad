@@ -758,7 +758,8 @@ video {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    /* Centered vertically */
     gap: 4rem;
     position: relative;
     z-index: 2;
@@ -773,9 +774,11 @@ video {
 
 .bio-text p {
     font-family: var(--font-primary);
-    font-size: 1.25rem;
-    line-height: 1.6;
+    font-size: 1.65rem;
+    /* Increased for impact */
+    line-height: 1.7;
     margin-bottom: 2rem;
+    color: #fff;
 }
 
 .bio-text strong {
