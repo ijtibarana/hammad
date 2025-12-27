@@ -660,7 +660,7 @@ function init3DParallax() {
     }
 }
 
-/* --- PREMIUM 3D REVIEWS SLIDER --- */
+/* --- PREMIUM 3D CONVEYOR REVIEWS SLIDER --- */
 function initReviewsSlider() {
     const container = document.querySelector('.reviews-container');
     const track = document.querySelector('.reviews-track');
@@ -668,46 +668,62 @@ function initReviewsSlider() {
 
     if (!container || !track || cards.length === 0) return;
 
-    // 1. Draggable Integration
-    Draggable.create(track, {
-        type: "x",
-        inertia: true,
-        bounds: container,
-        edgeResistance: 0.65,
-        onDrag: updateCard3D,
-        onThrowUpdate: updateCard3D,
-    });
+    let rotation = 0;
+    const radius = 800; // Depth of the conveyor belt
+    const angleStep = (Math.PI * 2) / cards.length;
 
-    // 2. 3D Rotation Calculation
-    function updateCard3D() {
-        const containerRect = container.getBoundingClientRect();
-        const centerX = containerRect.left + containerRect.width / 2;
+    // 1. Initial Position Setup
+    function updateLayout() {
+        cards.forEach((card, i) => {
+            const angle = rotation + (i * angleStep);
 
-        cards.forEach(card => {
-            const cardRect = card.getBoundingClientRect();
-            const cardX = cardRect.left + cardRect.width / 2;
+            // Calculate 3D positions
+            const x = Math.sin(angle) * radius;
+            const z = Math.cos(angle) * radius - radius; // Shift back so center is visible
+            const scale = 1 + (Math.cos(angle) * 0.5); // Bigger when close
+            const opacity = Math.max(0.2, (Math.cos(angle) + 1) / 2);
 
-            // Calculate distance from center (normalized -1 to 1)
-            const distanceFromCenter = (cardX - centerX) / (containerRect.width / 2);
-
-            // Apply 3D Rotation based on distance
-            const rotationY = distanceFromCenter * -35;
-            const zTranslate = Math.abs(distanceFromCenter) * -150;
-            const opacity = 1 - Math.abs(distanceFromCenter) * 0.5;
+            // Rotation for face-on effect
+            const rotY = (Math.sin(angle) * -20);
 
             gsap.set(card, {
-                rotateY: rotationY,
-                z: zTranslate,
+                x: x,
+                z: z,
+                scale: scale,
                 opacity: opacity,
+                rotateY: rotY,
+                zIndex: Math.round(z + radius), // Standard depth ordering
                 overwrite: "auto"
             });
         });
     }
 
-    // Initialize state
-    updateCard3D();
+    // 2. Continuous Auto-Rotation (Conveyor Effect)
+    const conveyorSpeed = 0.002;
+    const autoRotate = () => {
+        rotation -= conveyorSpeed;
+        updateLayout();
+        requestAnimationFrame(autoRotate);
+    };
 
-    // 3. Optional: Auto-stagger entrance
+    // Start auto-rotation
+    autoRotate();
+
+    // 3. Draggable Interaction
+    Draggable.create(document.createElement('div'), { // Proxy element for cleaner tracking
+        trigger: container,
+        type: "x",
+        onDrag: function () {
+            rotation += this.deltaX * 0.005;
+            updateLayout();
+        },
+        onThrowUpdate: function () {
+            rotation += this.deltaX * 0.005;
+            updateLayout();
+        }
+    });
+
+    // 4. Entrance Animation
     gsap.from(cards, {
         scrollTrigger: {
             trigger: ".reviews-section",
@@ -715,9 +731,8 @@ function initReviewsSlider() {
         },
         y: 100,
         opacity: 0,
-        stagger: 0.2,
-        duration: 1.5,
-        ease: "expo.out",
-        onComplete: updateCard3D
+        stagger: 0.1,
+        duration: 2,
+        ease: "expo.out"
     });
 }
