@@ -3075,9 +3075,9 @@ body.loaded #preloader {
 
 .review-card {
     position: absolute;
-    width: 800px;
-    /* Increased for high impact */
-    height: 500px;
+    width: 1000px;
+    /* Cinematic impact */
+    height: 600px;
     transform-style: preserve-3d;
     will-change: transform;
     transition: width 0.3s ease, height 0.3s ease;

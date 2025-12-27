@@ -671,7 +671,9 @@ function initReviewsSlider() {
     let rotation = 0;
     // Responsive Radius calculation
     const getRadius = () => {
-        return window.innerWidth < 768 ? window.innerWidth * 0.8 : 900;
+        if (window.innerWidth < 768) return window.innerWidth * 0.45;
+        if (window.innerWidth < 1200) return window.innerWidth * 0.7;
+        return 1000; // Increased for larger cards
     };
 
     let radius = getRadius();
@@ -708,8 +710,8 @@ function initReviewsSlider() {
         });
     }
 
-    // 2. Continuous Auto-Rotation (Increased Speed)
-    const conveyorSpeed = 0.004; // Doubled speed
+    // 2. Continuous Auto-Rotation (Cranked Speed)
+    const conveyorSpeed = 0.007; // Increased speed further for dynamic feel
     const autoRotate = () => {
         rotation -= conveyorSpeed;
         updateLayout();
@@ -724,7 +726,7 @@ function initReviewsSlider() {
         trigger: container,
         type: "x",
         onDrag: function () {
-            rotation += this.deltaX * 0.003; // Adjusted for new radius
+            rotation += this.deltaX * 0.003;
             updateLayout();
         },
         onThrowUpdate: function () {
