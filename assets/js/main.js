@@ -35,7 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
         init3DHeader();
         initMobileMenu();
         init3DParallax();
+        init3DParallax();
         initReviewsSlider();
+        initToolkitMarquee(); // New Software Marquee
 
         // Scroll to Top Logic
         const scrollTopBtn = document.getElementById('scrollTopBtn');
