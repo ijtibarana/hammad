@@ -144,7 +144,7 @@ function initCustomCursor() {
 /* --- GLOBAL REVEALS (Fast Loading) --- */
 function initGlobalReveals() {
     // Fast Staggered Text Reveal
-    gsap.utils.toArray('.thunder-title, .block-text, .philosophy-quote p').forEach((el) => {
+    gsap.utils.toArray('.thunder-title, .block-text, .philosophy-quote p, .toolkit-grid').forEach((el) => {
         gsap.from(el, {
             scrollTrigger: {
                 trigger: el,
