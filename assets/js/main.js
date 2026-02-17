@@ -35,9 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         init3DHeader();
         initMobileMenu();
         init3DParallax();
-        init3DParallax();
         initReviewsSlider();
-        initToolkitMarquee(); // New Software Marquee
 
         // Scroll to Top Logic
         const scrollTopBtn = document.getElementById('scrollTopBtn');
@@ -146,7 +144,7 @@ function initCustomCursor() {
 /* --- GLOBAL REVEALS (Fast Loading) --- */
 function initGlobalReveals() {
     // Fast Staggered Text Reveal
-    gsap.utils.toArray('.thunder-title, .block-text, .philosophy-quote p, .toolkit-grid').forEach((el) => {
+    gsap.utils.toArray('.thunder-title, .block-text, .philosophy-quote p').forEach((el) => {
         gsap.from(el, {
             scrollTrigger: {
                 trigger: el,
